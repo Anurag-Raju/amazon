@@ -1,10 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./screens/Home";
+import "./stylesheets/layout.css";
 function App() {
   return (
     <div className="App">
-      <h1>amazon</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
