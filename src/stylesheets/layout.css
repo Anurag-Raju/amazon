@@ -1,0 +1,23 @@
+.search {
+  background-color: #febd69;
+  height: 38px;
+  width: 32px;
+  margin-left: -10px;
+}
+.navbar {
+  background-color: black;
+}
+.navbar-toggler {
+  background-color: white;
+}
+.nav-link {
+  color: white !important;
+}
+.amazon-image {
+  height: 35px;
+  width: 90px;
+}
+input {
+  margin-left: 90px;
+  width: 680px !important;
+}
