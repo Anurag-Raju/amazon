@@ -6,7 +6,7 @@ function Header() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="./amazon.png" alt="" className="amazon-image" />
           </a>
           <button
@@ -50,7 +50,7 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/cart">
-                  <FaCartPlus />
+                  <FaCartPlus size={30} />
                 </Link>
               </li>
             </ul>
