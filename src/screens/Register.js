@@ -10,16 +10,20 @@ function Register() {
           <div className="login-form">
             <h3>Sign-In</h3>
             <hr />
-            <input placeholder="email" type="email" class="form-control" />
+            <input
+              placeholder="email"
+              type="email"
+              class="form-control login-input"
+            />
             <input
               placeholder="password"
               type="password"
-              class="form-control"
+              class="form-control login-input"
             />
             <input
               placeholder="confirm password"
               type="text"
-              class="form-control"
+              class="form-control login-input"
             />
             <button className="sign-in">Sign In</button>
           </div>
