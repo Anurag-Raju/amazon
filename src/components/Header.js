@@ -1,13 +1,15 @@
 import React from "react";
 import { FaSearch, FaCartPlus, FaUser } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function Header() {
+  const { cartItems } = useSelector((state) => state.cartReducer);
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            <img src="./amazon.png" alt="" className="amazon-image" />
+            <img src="./amazon.png" alt="amazon" className="amazon-image" />
           </a>
           <button
             class="navbar-toggler"
@@ -51,6 +53,7 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/cart">
                   <FaCartPlus size={30} />
+                  {cartItems.length}
                 </Link>
               </li>
             </ul>

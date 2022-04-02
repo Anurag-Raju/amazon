@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import "./stylesheets/layout.css";
 import "./stylesheets/form.css";
 import "./stylesheets/home.css";
+import "./stylesheets/productinfo.css";
 import Cart from "./screens/Cart";
 import ProductInfo from "./screens/ProductInfo";
 import Orders from "./screens/Orders";
