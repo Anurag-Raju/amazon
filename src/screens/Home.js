@@ -4,6 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import fireDB from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 // import { productItems } from "../productItems";
 function Home() {
   const [searchKey, setSearchKey] = useState("");
@@ -116,16 +117,22 @@ function Home() {
                       <div className="free">FREE Delivery by Amazon</div>
                     </div>
                     <div className="buttons">
-                      <button
+                      <Button
+                        variant="light"
+                        className="m-2"
                         onClick={() => {
                           navigate(`/product/${item.id}`);
                         }}
                       >
                         VIEW
-                      </button>
-                      <button onClick={() => addToCart(item)}>
+                      </Button>
+                      <Button
+                        variant="warning"
+                        className="m-2"
+                        onClick={() => addToCart(item)}
+                      >
                         ADD TO CART
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </div>
