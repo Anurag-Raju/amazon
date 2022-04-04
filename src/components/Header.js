@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function Header() {
   const { cartItems } = useSelector((state) => state.cartReducer);
+  const { user } = JSON.parse(localStorage.getItem("currentUser"));
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -37,7 +38,7 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   <FaUser />
-                  user
+                  {user.email.substring(0, user.email.length - 10)}
                 </Link>
               </li>
               <li className="nav-item">
