@@ -52,13 +52,13 @@ function Home() {
     <Layout loading={loading}>
       <div className="d-flex p-2" style={{ backgroundColor: "#232f3e" }}>
         <input
-          className="form-control m-2"
+          className="form-control m-2 z-1"
           type="text"
           value={searchKey}
           placeholder="search items"
           onChange={(e) => setSearchKey(e.target.value)}
         />
-        <FaSearch class="search mt-2" type="submit" />
+        <FaSearch class="search mt-2" type="submit" size={20} />
         <select
           className="form-control m-2"
           value={filterType}
