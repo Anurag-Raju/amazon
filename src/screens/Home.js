@@ -52,7 +52,7 @@ function Home() {
     <Layout loading={loading}>
       <div className="d-flex p-2" style={{ backgroundColor: "#232f3e" }}>
         <input
-          className="form-control m-2 z-1"
+          className="form-control m-2 home-input"
           type="text"
           value={searchKey}
           placeholder="search items"
@@ -106,12 +106,12 @@ function Home() {
                       <div className="price">
                         <span className="rs">Rs.</span>
                         <span className="amount">{item.price}</span>
-                        <span className="linethrough">Rs.69,900</span>
+                        <span className="linethrough">
+                          {item.price + item.price * 0.07}
+                        </span>
                         <span className="off">(7% off)</span>
                       </div>
-                      <div className="discount">
-                        Flat INR 4000 Off on SBI Cards
-                      </div>
+                      <div className="discount">Flat 5% Off on SBI Cards</div>
                       <br />
                       <div className="getitby">
                         Get it by<b> Monday, March 21</b>
