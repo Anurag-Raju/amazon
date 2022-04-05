@@ -25,11 +25,15 @@ function ProductInfo() {
   }
   return (
     <Layout>
-      <div className="container-fluid">
+      <div className="container">
         {product && (
           <div className="row">
             <div className="col-md-4">
-              <img src={product.imageURL} alt="" />
+              <img
+                src={product.imageURL}
+                alt=""
+                className="productinfo-image"
+              />
             </div>
             <div className="col-md-4">
               <br />

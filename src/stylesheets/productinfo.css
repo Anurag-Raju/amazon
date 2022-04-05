@@ -4,3 +4,13 @@
   padding: 5px;
   width: 200px;
 }
+@media screen and (max-width: 765px) {
+  .productinfo-image {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 765px) {
+  .productinfo-image {
+    width: 150%;
+  }
+}

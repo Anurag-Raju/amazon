@@ -5,6 +5,7 @@ import fireDB from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 // import { productItems } from "../productItems";
 function Home() {
   const [searchKey, setSearchKey] = useState("");
@@ -57,6 +58,7 @@ function Home() {
           placeholder="search items"
           onChange={(e) => setSearchKey(e.target.value)}
         />
+        <FaSearch class="search mt-2" type="submit" />
         <select
           className="form-control m-2"
           value={filterType}

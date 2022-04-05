@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch, FaCartPlus, FaUser } from "react-icons/fa";
+import { FaCartPlus, FaUser } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function Header() {
@@ -10,7 +10,11 @@ function Header() {
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            <img src="./amazon.png" alt="amazon" className="amazon-image" />
+            <img
+              src={require("./amazon.png")}
+              alt="amazon"
+              className="amazon-image"
+            />
           </a>
           <button
             class="navbar-toggler"
@@ -26,13 +30,12 @@ function Header() {
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="d-flex">
-              <input
-                class="form-control me-2"
+              {/* <input
+                class="form-control"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-              />
-              <FaSearch class="search" type="submit" />
+              /> */}
             </form>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
