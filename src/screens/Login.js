@@ -4,24 +4,24 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import Loader from "../components/Loader";
 function Login() {
-  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const auth = getAuth();
-  async function login() {
+  const [loading, setLoading] = useState(false);
+  const login = async () => {
     try {
       setLoading(true);
       const result = await signInWithEmailAndPassword(auth, email, password);
-      setLoading(false);
       localStorage.setItem("currentUser", JSON.stringify(result));
-      window.location.href = "/";
+      setLoading(false);
       toast.success("Login Successfull");
+      window.location.href = "/";
     } catch (error) {
       console.log(error);
-      toast.error("Login Failed");
       setLoading(false);
+      toast.error("Login Failed");
     }
-  }
+  };
   return (
     <div className="login-parent">
       {loading && <Loader />}
